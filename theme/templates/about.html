@@ -1,0 +1,74 @@
+{% extends "header.html" %}
+
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+	{% block title %}О компании{% endblock %}
+</head>
+{% block content %}
+<body class="m-0 p-0">
+	<div class="flex flex-col items-stretch pr-px">
+		<div
+		  class="overflow-hidden mt-8 pl-20 pr-11 pb-8 max-md:max-w-full max-md:-mr-px max-md:px-5"
+		>
+		  <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+			<div
+			  class="flex flex-col items-stretch w-[59%] max-md:w-full max-md:ml-0"
+			>
+			  <div
+				class="flex flex-col items-stretch mt-5 max-md:max-w-full max-md:mt-10"
+			  >
+				<div
+				  class="text-white text-5xl font-bold leading-[54px] whitespace-nowrap max-md:max-w-full max-md:text-4xl max-md:leading-[49px]"
+				>
+				  О компании
+				</div>
+				<div
+				  class="text-white text-xl leading-6 mt-20 max-md:max-w-full max-md:mt-10"
+				>
+				  Уполномоченный платежный агент: ООО &quot;КОДЭКСКЛЮЗИВ&quot;,
+				  188660, РОССИЯ, ЛЕНИНГРАДСКАЯ ОБЛ., ВСЕВОЛОЖСКИЙ Р-Н, БУГРЫ,
+				  АНГЛИЙСКАЯ, Д 6, КВ 32н, ИНН 4706052248, КПП 470601001, ОГРН
+				  1224700016640
+				  <br />
+				  <br />
+				  ООО &quot;REACTOR IT&quot; ИНН Республики Узбекистан 310009550 Место
+				  регистрации и осуществления деятельности: ГОРОД ТАШКЕНТ,
+				  ЮНУСАБАДСКИЙ РАЙОН, 12 КВАРТАЛ, д. 20А
+				  <br />
+				  <br />
+				  Сайт: codex.su
+				  <br />
+				  <br />
+				  Email: support@steamstar.ru
+				</div>
+			  </div>
+			</div>
+			<a class="" target="" href="{% url 'theme:index' %}">
+				<div
+				class="bg-yellow-950 flex items-stretch justify-between gap-5 pl-5 pr-20 py-3 rounded-3xl max-md:pr-5"
+			  >
+				<img
+				  loading="lazy"
+				  src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff92e5b1-6fc8-489e-9723-54a742716975?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+				  class="aspect-square object-contain object-center w-9 overflow-hidden shrink-0 max-w-full"
+				/>
+				<div
+				  class="text-neutral-200 text-xl leading-6 grow whitespace-nowrap mt-2.5 self-start"
+				>
+				  На главную
+				</div>
+			  </div>
+			  </a>
+		  </div>
+		</div>
+	  </div>
+	  
+</body>
+{% endblock %}
+</html>

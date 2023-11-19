@@ -1,0 +1,175 @@
+{% extends "header.html" %}
+
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+	{% block title %}Блог{% endblock %}
+</head>
+{% block content %}
+<body class="m-0 p-0">
+    <div class="flex flex-col items-stretch pr-px">
+        <div
+          class="flex-col overflow-hidden relative flex min-h-[1163px] items-center mt-8 pb-8 px-5 max-md:max-w-full max-md:-mr-px"
+        >
+          <img
+            loading="lazy"
+            srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/bda59ff9-a09a-41eb-95d9-983189d46e83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/bda59ff9-a09a-41eb-95d9-983189d46e83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bda59ff9-a09a-41eb-95d9-983189d46e83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/bda59ff9-a09a-41eb-95d9-983189d46e83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/bda59ff9-a09a-41eb-95d9-983189d46e83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bda59ff9-a09a-41eb-95d9-983189d46e83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/bda59ff9-a09a-41eb-95d9-983189d46e83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/bda59ff9-a09a-41eb-95d9-983189d46e83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="absolute z-[-1] h-full w-full object-cover object-center inset-0"
+          />
+          <div class="relative flex w-full max-w-[1560px] flex-col max-md:max-w-full">
+            <div
+              class="self-stretch flex w-full justify-between gap-5 max-md:max-w-full max-md:flex-wrap"
+            >
+              <div
+                class="text-white text-5xl font-bold leading-[54px] grow shrink basis-auto mt-5 max-md:text-4xl max-md:leading-[49px]"
+              >
+                Блог SteamGame
+              </div>
+              <a href="{% url 'theme:index' %}"  class="bg-yellow-950 flex items-stretch justify-between gap-5 pl-5 pr-20 py-3 rounded-3xl self-start max-md:pr-5" ><img  loading="lazy"  src="https://cdn.builder.io/api/v1/image/assets/TEMP/33fc3b23-4f01-4cad-99ee-282d89329c88?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"  class="aspect-square object-contain object-center w-9 overflow-hidden shrink-0 max-w-full"  />
+                <div  class="text-neutral-200 text-xl leading-6 grow whitespace-nowrap mt-2.5 self-start" >Вернуться</div></a>
+            </div>
+            <div
+              class="text-white text-3xl leading-7 self-stretch mt-3.5 max-md:max-w-full"
+            >
+              Все самое интересное в Steam
+            </div>
+            <div
+              class="text-stone-300 text-xl leading-5 self-stretch mt-7 max-md:max-w-full"
+            >
+              <span class="">
+                На портале SteamGame вы узнаете, как создать аккаунт, как пополнить
+                Стим, как покупать игры дешевле, как повысить уровень аккаунта или
+                перенести его в другой регион. Блог Steamstar полезен и для новичков,
+                и для опытных геймеров. Каждый пользователь Steam найдет ответ на свой
+                вопрос! Обычно геймеры, даже столкнувшись с трудностями, не используют
+                Steam в полной мере. Мы решили это исправить!
+                <br />
+                <br />
+                Знали ли вы, что приобретенную ранее игру можно вернуть?
+                <br />
+                Умеете эффективно сочетать Steam и общение в Discord?
+                <br />
+                Обменивались ли вещами с другими пользователями?
+                <br />
+                Мечтали повысить уровень профиля и получить больше наград?
+                <br />
+                <br />
+              </span>
+              <span class="font-bold">
+                Читайте блог SteamGame, чтобы использовать все доступные возможности
+                Steam. В этом разделе мы рассказываем о полезных функциях, настройках
+                и безопасности.
+              </span>
+            </div>
+            <div class="self-stretch mt-24 max-md:max-w-full max-md:mt-10">
+              <div
+                class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0"
+              >
+                <div
+                  class="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0"
+                >
+                  <div
+                    class="bg-yellow-950 bg-opacity-30 flex grow flex-col items-stretch w-full mx-auto pb-9 rounded-3xl max-md:max-w-full max-md:mt-10"
+                  >
+                    <img
+                      loading="lazy"
+                      srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                      class="aspect-[2.16] object-contain object-center w-full overflow-hidden max-md:max-w-full"
+                    />
+                    <div
+                      class="flex w-[358px] max-w-full flex-col items-stretch ml-8 mt-10 self-start max-md:ml-2.5"
+                    >
+                      <div
+                        class="text-white text-center text-2xl font-bold leading-7 whitespace-nowrap"
+                      >
+                        Как создать аккаунт в Steam
+                      </div>
+                      <div class="text-zinc-400 text-xl leading-6 mt-7">
+                        Рассмотрим варианты, как создать аккаунт в Стим на смартфоне
+                        или компьютере. Это можно сделать несколькими способами:
+                      </div>
+                      <a href="{% url 'theme:htcsa' %}"
+                        class="hover:bg-gray-700 text-white text-center text-xl font-bold leading-6 border-[color:var(--gold-osn,#F5D632)] items-center mt-12 px-5 py-6 rounded-3xl border-[1.333px] border-solid max-md:mt-10"
+                      >
+                        Читать
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0"
+                >
+                <div
+                class="bg-yellow-950 bg-opacity-30 flex grow flex-col items-stretch w-full mx-auto pb-9 rounded-3xl max-md:max-w-full max-md:mt-10"
+              >
+                <img
+                  loading="lazy"
+                  srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                  class="aspect-[2.16] object-contain object-center w-full overflow-hidden max-md:max-w-full"
+                />
+                <div
+                  class="flex w-[358px] max-w-full flex-col items-stretch ml-8 mt-10 self-start max-md:ml-2.5"
+                >
+                  <div
+                    class="text-white text-center text-2xl font-bold leading-7 whitespace-nowrap"
+                  >
+                    Как создать аккаунт в Steam
+                  </div>
+                  <div class="text-zinc-400 text-xl leading-6 mt-7">
+                    Рассмотрим варианты, как создать аккаунт в Стим на смартфоне
+                    или компьютере. Это можно сделать несколькими способами:
+                  </div>
+                  <a href="{% url 'theme:htcsa' %}"
+                    class="hover:bg-gray-700 text-white text-center text-xl font-bold leading-6 border-[color:var(--gold-osn,#F5D632)] items-center mt-12 px-5 py-6 rounded-3xl border-[1.333px] border-solid max-md:mt-10"
+                  >
+                    Читать
+                </a>
+                </div>
+              </div>
+                </div>
+                <div
+                  class="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0"
+                >
+                <div
+                class="bg-yellow-950 bg-opacity-30 flex grow flex-col items-stretch w-full mx-auto pb-9 rounded-3xl max-md:max-w-full max-md:mt-10"
+              >
+                <img
+                  loading="lazy"
+                  srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/0230069d-abd7-4a67-9a4d-97bc04c612e1?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                  class="aspect-[2.16] object-contain object-center w-full overflow-hidden max-md:max-w-full"
+                />
+                <div
+                  class="flex w-[358px] max-w-full flex-col items-stretch ml-8 mt-10 self-start max-md:ml-2.5"
+                >
+                  <div
+                    class="text-white text-center text-2xl font-bold leading-7 whitespace-nowrap"
+                  >
+                    Как создать аккаунт в Steam
+                  </div>
+                  <div class="text-zinc-400 text-xl leading-6 mt-7">
+                    Рассмотрим варианты, как создать аккаунт в Стим на смартфоне
+                    или компьютере. Это можно сделать несколькими способами:
+                  </div>
+                  <a href="{% url 'theme:htcsa' %}"
+                    class="hover:bg-gray-700 text-white text-center text-xl font-bold leading-6 border-[color:var(--gold-osn,#F5D632)] items-center mt-12 px-5 py-6 rounded-3xl border-[1.333px] border-solid max-md:mt-10"
+                  >
+                    Читать
+                </a>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+</body>
+{% endblock %}
+</html>

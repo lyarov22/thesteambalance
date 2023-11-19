@@ -1,0 +1,213 @@
+{% extends "header.html" %}
+
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+	{% block title %}FAQ{% endblock %}
+</head>
+{% block content %}
+<body class="m-0 p-0">
+	<div class="flex flex-col items-stretch pr-px">
+		<div
+		  class="flex-col overflow-hidden relative flex min-h-[1658px] items-center mt-8 pb-8 px-5 max-md:max-w-full max-md:-mr-px"
+		>
+		  <img
+			loading="lazy"
+			srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/73c05732-33e4-4d8f-9238-212df2f284fc?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/73c05732-33e4-4d8f-9238-212df2f284fc?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/73c05732-33e4-4d8f-9238-212df2f284fc?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/73c05732-33e4-4d8f-9238-212df2f284fc?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/73c05732-33e4-4d8f-9238-212df2f284fc?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/73c05732-33e4-4d8f-9238-212df2f284fc?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/73c05732-33e4-4d8f-9238-212df2f284fc?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/73c05732-33e4-4d8f-9238-212df2f284fc?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+			class="absolute z-[-1] h-full w-full object-cover object-center inset-0"
+		  />
+		  <div
+			class="relative flex w-full max-w-[1562px] flex-col items-stretch max-md:max-w-full"
+		  >
+			<div
+			  class="flex w-full justify-between gap-5 max-md:max-w-full max-md:flex-wrap"
+			>
+			  <div
+				class="text-white text-5xl font-bold leading-[54px] mt-5 max-md:text-4xl max-md:leading-[49px]"
+			  >
+				FAQ
+			  </div>
+			  <a class="" target="" href="{% url 'theme:index' %}">
+				<div
+				class="bg-yellow-950 flex items-stretch justify-between gap-5 pl-5 pr-20 py-3 rounded-3xl max-md:pr-5"
+			  >
+				<img
+				  loading="lazy"
+				  src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff92e5b1-6fc8-489e-9723-54a742716975?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+				  class="aspect-square object-contain object-center w-9 overflow-hidden shrink-0 max-w-full"
+				/>
+				<div
+				  class="text-neutral-200 text-xl leading-6 grow whitespace-nowrap mt-2.5 self-start"
+				>
+				  На главную
+				</div>
+			  </div>
+			  </a>
+			  </div>
+			</div>
+			<div class="text-white text-3xl leading-7 mt-3.5 max-md:max-w-full">
+			  Часто задаваемые вопросы
+			</div>
+			<div
+			  class="bg-gray-800 bg-opacity-70 flex flex-col items-stretch mt-20 pl-3.5 pr-4 pt-9 pb-12 rounded-2xl max-md:max-w-full max-md:mt-10"
+			>
+			  <div
+				class="text-white text-2xl font-bold leading-7 whitespace-nowrap ml-7 self-start max-md:max-w-full"
+			  >
+				Через какое время будет пополнен баланс?
+			  </div>
+			  <img
+				loading="lazy"
+				src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7133059-e384-4e59-a07c-096fd4df3a19?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+				class="aspect-[766.5] object-contain object-center w-full stroke-[1.333px] stroke-slate-600 overflow-hidden mt-5 max-md:max-w-full"
+			  />
+			  <div
+				class="text-white text-xl leading-6 underline max-w-[1471px] ml-7 mt-7 mb-3.5 self-start max-md:max-w-full"
+			  >
+				<span class="text-slate-400">
+				  Моментально после оплаты, ваш баланс будет пополнен, но не исключаем
+				  случаи, когда пополнение баланса может быть с задержками, просьба не
+				  волноваться и дождаться, в крайнем случае обратится в
+				</span>
+				<span class="font-bold text-white">Техническую поддержку</span>
+				<span class="text-slate-400">.</span>
+			  </div>
+			</div>
+			<div
+			  class="bg-gray-800 bg-opacity-70 flex flex-col items-stretch mt-6 pl-3.5 pr-4 pt-9 pb-12 rounded-2xl max-md:max-w-full"
+			>
+			  <div
+				class="text-white text-2xl font-bold leading-7 whitespace-nowrap ml-7 self-start max-md:max-w-full"
+			  >
+				Мой баланс не был пополнен. Что делать?
+			  </div>
+			  <img
+				loading="lazy"
+				src="https://cdn.builder.io/api/v1/image/assets/TEMP/78831480-7780-4900-9a6d-09cad9aba414?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+				class="aspect-[766.5] object-contain object-center w-full stroke-[1.333px] stroke-slate-600 overflow-hidden mt-5 max-md:max-w-full"
+			  />
+			  <div
+				class="text-white text-xl leading-6 underline max-w-[1471px] ml-7 mt-7 mb-3.5 self-start max-md:max-w-full"
+			  >
+				<span class="text-slate-400">
+				  Моментально после оплаты, ваш баланс будет пополнен, но не исключаем
+				  случаи, когда пополнение баланса может быть с задержками, просьба не
+				  волноваться и дождаться, в крайнем случае обратится в
+				</span>
+				<span class="font-bold text-white">Техническую поддержку</span>
+				<span class="text-slate-400">.</span>
+			  </div>
+			</div>
+			<div
+			  class="bg-gray-800 bg-opacity-70 flex flex-col items-stretch mt-6 pl-3.5 pr-4 pt-9 pb-12 rounded-2xl max-md:max-w-full"
+			>
+			  <div
+				class="text-white text-2xl font-bold leading-7 whitespace-nowrap ml-7 self-start max-md:max-w-full"
+			  >
+				Почему меняется регион и валюта вновь созданного аккаунта Steam после
+				первого пополнения баланса?
+			  </div>
+			  <img
+				loading="lazy"
+				src="https://cdn.builder.io/api/v1/image/assets/TEMP/1de085a7-61a2-4bf2-b58b-f3371fd776c6?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+				class="aspect-[766.5] object-contain object-center w-full stroke-[1.333px] stroke-slate-600 overflow-hidden mt-5 max-md:max-w-full"
+			  />
+			  <div
+				class="text-white text-xl leading-6 underline max-w-[1471px] ml-7 mt-7 mb-3.5 self-start max-md:max-w-full"
+			  >
+				<span class="text-slate-400">
+				  Моментально после оплаты, ваш баланс будет пополнен, но не исключаем
+				  случаи, когда пополнение баланса может быть с задержками, просьба не
+				  волноваться и дождаться, в крайнем случае обратится в
+				</span>
+				<span class="font-bold text-white">Техническую поддержку</span>
+				<span class="text-slate-400">.</span>
+			  </div>
+			</div>
+			<div
+			  class="bg-gray-800 bg-opacity-70 flex flex-col items-stretch mt-6 pl-3.5 pr-4 pt-9 pb-12 rounded-2xl max-md:max-w-full"
+			>
+			  <div
+				class="text-white text-2xl font-bold leading-7 whitespace-nowrap ml-7 self-start max-md:ml-2.5"
+			  >
+				Требования к аккаунту?
+			  </div>
+			  <img
+				loading="lazy"
+				src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f18585c-3f3a-4afb-b57e-b5bd604d2e9b?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+				class="aspect-[766.5] object-contain object-center w-full stroke-[1.333px] stroke-slate-600 overflow-hidden mt-5 max-md:max-w-full"
+			  />
+			  <div
+				class="text-white text-xl leading-6 underline max-w-[1471px] ml-7 mt-7 mb-3.5 self-start max-md:max-w-full"
+			  >
+				<span class="text-slate-400">
+				  Моментально после оплаты, ваш баланс будет пополнен, но не исключаем
+				  случаи, когда пополнение баланса может быть с задержками, просьба не
+				  волноваться и дождаться, в крайнем случае обратится в
+				</span>
+				<span class="font-bold text-white">Техническую поддержку</span>
+				<span class="text-slate-400">.</span>
+			  </div>
+			</div>
+			<div
+			  class="bg-gray-800 bg-opacity-70 flex flex-col items-stretch mt-6 pl-3.5 pr-4 pt-9 pb-12 rounded-2xl max-md:max-w-full"
+			>
+			  <div
+				class="text-white text-2xl font-bold leading-7 whitespace-nowrap ml-7 self-start max-md:max-w-full"
+			  >
+				Я указал неверный логин. Что делать?
+			  </div>
+			  <img
+				loading="lazy"
+				src="https://cdn.builder.io/api/v1/image/assets/TEMP/350a1211-96cd-48c3-87a7-458da078542c?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+				class="aspect-[766.5] object-contain object-center w-full stroke-[1.333px] stroke-slate-600 overflow-hidden mt-5 max-md:max-w-full"
+			  />
+			  <div
+				class="text-white text-xl leading-6 underline max-w-[1471px] ml-7 mt-7 mb-3.5 self-start max-md:max-w-full"
+			  >
+				<span class="text-slate-400">
+				  Моментально после оплаты, ваш баланс будет пополнен, но не исключаем
+				  случаи, когда пополнение баланса может быть с задержками, просьба не
+				  волноваться и дождаться, в крайнем случае обратится в
+				</span>
+				<span class="font-bold text-white">Техническую поддержку</span>
+				<span class="text-slate-400">.</span>
+			  </div>
+			</div>
+			<div
+			  class="bg-gray-800 bg-opacity-70 flex flex-col items-stretch mt-7 pl-3.5 pr-4 pt-9 pb-12 rounded-2xl max-md:max-w-full"
+			>
+			  <div
+				class="text-white text-2xl font-bold leading-7 whitespace-nowrap ml-7 self-start max-md:ml-2.5"
+			  >
+				Что такое логин?
+			  </div>
+			  <img
+				loading="lazy"
+				src="https://cdn.builder.io/api/v1/image/assets/TEMP/deb6cb2f-7fa5-489c-abc6-2b0e741fcdca?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+				class="aspect-[766.5] object-contain object-center w-full stroke-[1.333px] stroke-slate-600 overflow-hidden mt-6 max-md:max-w-full"
+			  />
+			  <div
+				class="text-white text-xl leading-6 underline max-w-[1471px] ml-7 mt-7 mb-3.5 self-start max-md:max-w-full"
+			  >
+				<span class="text-slate-400">
+				  Моментально после оплаты, ваш баланс будет пополнен, но не исключаем
+				  случаи, когда пополнение баланса может быть с задержками, просьба не
+				  волноваться и дождаться, в крайнем случае обратится в
+				</span>
+				<span class="font-bold text-white">Техническую поддержку</span>
+				<span class="text-slate-400">.</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+</body>
+{% endblock %}
+</html>

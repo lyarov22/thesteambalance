@@ -1,0 +1,465 @@
+{% extends "header.html" %}
+
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+    <link rel="stylesheet" href="{% static 'universal.css' %}">
+    {% tailwind_css %}
+</head>
+{% block content %}
+<body class="m-0 p-0">
+  <div class="flex flex-col max-sm:pr-6 max-sm:pl-6">
+    
+      <div
+        class="relative self-center w-full max-w-[1170px] mt-24 max-md:max-w-full max-md:mt-10 "
+      >
+        <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+          <div
+            class="flex flex-col items-stretch w-[48%] max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="relative flex grow flex-col max-md:max-w-full max-md:mt-10"
+            >
+              <div
+                class="flex w-[149px] max-w-full items-stretch gap-2 self-start"
+              >
+                <div
+                  class="text-yellow-300 text-base font-medium leading-5 whitespace-nowrap stroke-[1px] aspect-square items-stretch py-1.5 rounded-[50%]"
+                >
+                  ?
+                </div>
+                <div id="main"
+                  class="text-white text-sm font-medium leading-4 grow whitespace-nowrap mt-1.5 self-start"
+                >
+                  Как это работает?
+                </div>
+              </div>
+              <div
+                class="text-white text-4xl leading-10 bg-clip-text bg-[linear-gradient(180deg,#FFD526_0%,#FFF0B1_100%)] self-stretch whitespace-nowrap mt-2.5 max-md:max-w-full"
+              >
+                <span class="text-white whitespace-normal">Пополнить баланс</span>
+                STEAM
+              </div>
+              <div
+                class="text-white text-lg leading-5 self-stretch mt-2 max-md:max-w-full"
+              >
+                Моментальное и недорогое пополнение стим аккаунтов при поддержке
+                надежных партнеров!
+              </div>
+              
+              
+              <div
+                class="border bg-neutral-900 self-stretch flex w-full items-stretch justify-between gap-5 mt-9 pl-6 pr-5 rounded-2xl border-solid border-zinc-700 max-md:max-w-full max-md:flex-wrap max-md:pl-5"
+              >
+                <div
+                  class="flex items-stretch justify-between gap-5 max-md:justify-center mt-3"
+                >
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe4ae586-0cc0-49ae-837a-84ca00f36a83?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                    class="aspect-square object-contain object-center w-[25px] overflow-hidden self-center shrink-0 max-w-full my-auto"
+                  />
+
+                  <div class="text-zinc-400 text-base leading-5 self-center grow whitespace-nowrap my-auto max-sm:mt-0 max-sm:mt-3 max-sm:mb-[-16px]">
+                    <label for="amount" class="sr-only">Логин</label>
+                    <input placeholder="Введите логин" type="text" id="login" name="login" class="w-full px-2 py-1 mb-4 bg-transparent border-none focus:ring-0 xl:mt-5">
+                    <div id="error-message1" class="text-red-500"></div>
+                  </div>
+                </div>
+                <div
+                  class="bg-black self-center flex items-stretch gap-3 my-auto pl-2.5 pr-3 py-2 rounded-[79px]"
+                >
+                <div style="z-index: 11;" class="relative group">
+                  <button class="text-white p-2 rounded hover:bg-gray-700">Где взять логин?</button>
+                  <div class="absolute bg-gray-700 text-white text-xs p-4 rounded mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 w-96">
+                    <video width="100%" height="100%" autoplay loop muted controls="false">
+                      <source src="{% static 'videos/steam.mp4' %}" type="video/mp4">
+                      Ваш браузер не поддерживает тег video.
+                    </video>
+                  </div>
+                </div>
+                  
+                </div>
+              </div>
+              <div
+                class="border bg-neutral-900 self-stretch flex items-stretch justify-between gap-5 mt-2.5 pl-5 pr-20 rounded-2xl border-solid border-zinc-700 max-md:max-w-full max-md:flex-wrap max-md:px-5"
+              >
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba4b1825-3a6b-4a66-b87c-6c909f086b5f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                  class="aspect-[2.55] object-contain object-center w-7 overflow-hidden self-center shrink-0 max-w-full my-auto mt-5"
+                />
+
+                <div class="text-zinc-400 text-base leading-5 self-center grow whitespace-nowrap my-auto mt-3">
+                  <label for="amount" class="sr-only">Введите сумму пополнения</label>
+                  <input oninput="updateOutput()" placeholder="Введите сумму пополнения" type="text" id="amount" name="amount" class="w-full px-2 py-1 mb-4 bg-transparent border-none focus:ring-0 lg:mt-5">
+                  <div id="error-message" class="text-red-500"></div>
+                </div>
+
+                <script>
+                  function updateOutput() {
+                    var inputValue = document.getElementById('amount').value;
+                    setAmount(inputValue);
+                  }
+                </script>
+
+              </div>
+              <div
+                class="self-stretch flex items-stretch justify-between gap-2 mt-1.5 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
+              >
+                <div onclick="setAmount(1000)" style="cursor: pointer; transition: background-color 0.3s ease;"
+                  class="text-zinc-100 text-sm font-semibold leading-4 whitespace-nowrap bg-neutral-700 grow items-center px-5 py-4 rounded-lg hover:bg-gray-700"
+                >
+                  <p class="text-center">1000 РУБ</p>
+                </div>
+                <div onclick="setAmount(5000)" style="cursor: pointer; transition: background-color 0.3s ease;"
+                  class="text-zinc-100 text-sm font-semibold leading-4 whitespace-nowrap bg-neutral-700 grow items-center px-5 py-4 rounded-lg hover:bg-gray-700"
+                >
+                  <p class="text-center">5000 РУБ</p>
+                </div>
+                <div onclick="setAmount(10000)" style="cursor: pointer; transition: background-color 0.3s ease;"
+                  class="text-zinc-100 text-sm font-semibold leading-4 whitespace-nowrap bg-neutral-700 grow items-center px-5 py-4 rounded-lg hover:bg-gray-700"
+                >
+                  <p class="text-center">10000 РУБ</p>
+                </div>
+                <div onclick="setAmount(20000)" style="cursor: pointer; transition: background-color 0.3s ease;"
+                  class="text-zinc-100 text-sm font-semibold leading-4 whitespace-nowrap bg-neutral-700 grow items-center px-5 py-4 rounded-lg hover:bg-gray-700"
+                >
+                  <p class="text-center">20000 РУБ</p>
+                </div>
+
+                <script>
+                  function setAmount(amount) {
+                    // Устанавливаем значение в инпут
+                    document.getElementById('amount').value = amount;
+              
+                    // Рассчитываем комиссию (6% от суммы)
+                    var commission = amount * 0.06;
+                    var bank = amount * 0.16;
+              
+                    // Выводим комиссию в другом элементе
+                    var finalSum = amount - commission - bank;
+
+                    document.getElementById('finalSum').textContent = finalSum.toFixed(2) + ' РУБ';
+                    document.getElementById('bank').textContent = bank.toFixed(2) + ' РУБ';
+                    document.getElementById('commission').textContent = commission.toFixed(2) + ' РУБ';
+                  }
+                </script>
+
+              </div>
+              <div
+                class="border bg-neutral-900 self-stretch flex items-stretch justify-between gap-5 mt-3 pl-6 pr-20 rounded-2xl border-solid border-zinc-700 max-md:max-w-full max-md:flex-wrap max-md:px-5"
+              >
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a1d48be-1132-4a41-b101-1fd41117c4a3?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                  class="aspect-square object-contain object-center w-[25px] overflow-hidden self-center shrink-0 max-w-full my-auto"
+                />
+                <div class="text-zinc-400 text-base leading-5 self-center grow whitespace-nowrap my-auto mt-3">
+                  <label for="email" class="sr-only">Введите e-mail</label>
+                  <input placeholder="Введите e-mail" type="text" id="email" name="email" class="w-full px-2 py-1 mb-4 bg-transparent border-none focus:ring-0 lg:mt-5">
+                  <div id="error-message2" class="text-red-500"></div>
+                </div>
+              </div>
+              <div
+                class="self-stretch flex items-stretch justify-between gap-5 mt-6 max-md:max-w-full max-md:flex-wrap"
+              >
+              <div class="flex items-center ml-5">
+                <input type="checkbox" id="checkbox" class="hidden">
+                <label for="checkbox" class="cursor-pointer w-5 h-5 border border-solid border-gray-300 rounded relative">
+                  <span id="checkbox-indicator" class="absolute top-0 left-0 w-full h-full bg-transparent rounded transition-background duration-300"></span>
+                </label>
+                <div id="error-message3" class="text-red-500 ml-3"></div>
+              </div>
+              
+              <script>
+                document.getElementById('checkbox').addEventListener('change', function () {
+                  var checkboxIndicator = document.getElementById('checkbox-indicator');
+                  if (this.checked) {
+                    checkboxIndicator.style.backgroundColor = '#3490dc'; // Синий цвет при нажатии
+                  } else {
+                    checkboxIndicator.style.backgroundColor = 'transparent'; // Прозрачный цвет, если не нажат
+                  }
+                });
+              </script>
+              
+                <div
+                  class="text-white text-sm font-semibold leading-4 self-center grow shrink basis-auto my-auto max-md:max-w-full"
+                >
+                  Я подтверждаю, что указал свой логин Steam, а не никнейм
+                </div>
+              </div>
+              <div
+                class="self-stretch flex items-stretch justify-between gap-5 mt-12 max-md:max-w-full max-md:flex-wrap max-md:mt-10"
+              >
+                <div class="flex grow basis-[0%] flex-col items-stretch">
+                  <div class="text-white text-sm leading-4 whitespace-nowrap">
+                    Получите на баланс STEAM
+                  </div>
+                  <div
+                    class="text-white text-sm leading-4 whitespace-nowrap mt-5"
+                  >
+                    Комиссия платежной системы
+                  </div>
+                  <div
+                    class="text-white text-sm leading-4 whitespace-nowrap mt-6"
+                  >
+                    Комиссия сервиса SteamGame
+                  </div>
+                </div>
+                <div class="flex basis-[0%] flex-col items-stretch self-start">
+                  <div
+                    class="text-yellow-300 text-sm font-bold leading-4 whitespace-nowrap"
+                  >
+                  <p class="text-right" id="finalSum">0.00 РУБ</p>
+                  </div>
+                  <div
+                    class="text-yellow-300 text-sm font-bold leading-4 whitespace-nowrap mt-5"
+                  >
+                  <p class="text-right" id="bank">0.00 РУБ</p>
+                  </div>
+                  <div
+                    class="text-yellow-300 text-sm font-bold leading-4 whitespace-nowrap mt-6"
+                  >
+                    <p class="text-right" id="commission">0.00 РУБ</p>
+                  </div>
+                </div>
+              </div>
+              <button
+              class="text-white text-lg font-black leading-5 whitespace-nowrap shadow-sm bg-[linear-gradient(270deg,#B5DC59_-1.71%,#661800_117.89%)] self-stretch items-center mt-8 px-5 py-7 rounded-2xl max-md:max-w-full"
+              onclick="handleButtonClick()"
+            >
+              Пополнить баланс
+            </button>
+
+            <script>
+              function handleButtonClick() {
+                // Получаем значение из инпута
+                var inputValue = document.getElementById('amount').value;
+                var inputValue1 = document.getElementById('login').value;
+                var inputValue2 = document.getElementById('email').value;
+                var checkboxChecked = document.getElementById('checkbox').checked;
+            
+                if (!inputValue1.trim()) {
+                  document.getElementById('error-message1').innerText = 'Введите логин';
+                  return;
+                }
+                
+                document.getElementById('error-message1').innerText = '';
+            
+                // Проверка на пустое поле
+                if (!inputValue.trim()) {
+                  document.getElementById('error-message').innerText = 'Введите сумму пополнения';
+                  return;
+                }
+            
+                // Проверка на значение меньше 50
+                if (parseInt(inputValue) < 50) {
+                  document.getElementById('error-message').innerText = 'Сумма должна быть не менее 50';
+                  return;
+                }
+            
+                document.getElementById('error-message').innerText = '';
+            
+                if (!inputValue2.trim()) {
+                  document.getElementById('error-message2').innerText = 'Введите сумму пополнения';
+                  return;
+                }
+            
+                document.getElementById('error-message2').innerText = '';
+            
+                // Проверка на нажатие чекбокса
+                if (!checkboxChecked) {
+                  document.getElementById('error-message3').innerText = 'Поставьте галочку';
+                  return;
+                }
+            
+                document.getElementById('error-message3').innerText = '';
+            
+                // Ваша логика обработки нажатия на кнопку
+                console.log("Кнопка нажата! Введенная сумма: " + inputValue);
+              }
+            </script>
+            
+
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-[52%] ml-5 max-md:w-full max-md:ml-0"
+          >
+            <div style="z-index: 10;"
+              class="flex-col overflow-hidden relative flex min-h-[611px] mt-7 pt-12 pb-3.5 px-5 max-md:max-w-full max-md:mt-10 rounded-md"
+            >
+              <img
+                loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/705882ea-26ef-44b1-8205-95ab1496a5ac?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/705882ea-26ef-44b1-8205-95ab1496a5ac?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/705882ea-26ef-44b1-8205-95ab1496a5ac?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/705882ea-26ef-44b1-8205-95ab1496a5ac?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/705882ea-26ef-44b1-8205-95ab1496a5ac?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/705882ea-26ef-44b1-8205-95ab1496a5ac?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/705882ea-26ef-44b1-8205-95ab1496a5ac?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/705882ea-26ef-44b1-8205-95ab1496a5ac?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                class="absolute z-[-1] h-full w-full object-cover object-center inset-0"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/cee8fb22-f50b-4633-9ec0-e514d65f473f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                class="aspect-[4.42] object-contain object-center w-[468px] overflow-hidden max-w-full mr-4 mt-96 max-md:mr-2.5 max-md:mt-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative self-center w-full max-w-[1170px] mt-14 max-md:max-w-full max-md:mt-10"
+      >
+        <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+          <div
+            class="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="border border-[color:var(--gold-osn,#F5D632)] relative flex grow flex-col items-center w-full mx-auto px-12 py-12 rounded-2xl border-dashed max-md:mt-8 max-md:px-5"
+            >
+              <div class="text-white text-center text-xl font-bold leading-6">
+                Экономьте деньги
+              </div>
+              <div
+                class="text-zinc-400 text-center text-base leading-5 self-stretch mt-7"
+              >
+                Мы тщательно анализируем ситуацию на рынке международных
+                финансовых услуг и постоянно работаем над тем, чтобы вы могли
+                недорого пополнить стим в России.
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="border border-[color:var(--gold-osn,#F5D632)] relative flex grow flex-col w-full mx-auto pl-9 pr-12 py-12 rounded-2xl border-dashed max-md:mt-8 max-md:px-5"
+            >
+              <div
+                class="text-white text-center text-xl font-bold leading-6 whitespace-nowrap ml-4 max-md:ml-2.5"
+              >
+                Надежность и прозрачность
+              </div>
+              <div
+                class="text-zinc-400 text-center text-base leading-5 self-stretch mt-6"
+              >
+                Отсутствие скрытых комиссий и сотрудничество только с проверенными
+                и надежными партнерами позволяет нам гарантировать, что деньги
+                поступят на ваш стим баланс без потерь.
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="border border-[color:var(--gold-osn,#F5D632)] relative flex grow flex-col w-full mx-auto px-16 py-12 rounded-2xl border-dashed max-md:mt-8 max-md:px-5"
+            >
+              <div
+                class="text-white text-center text-xl font-bold leading-6 max-w-[263px] ml-3 max-md:ml-2.5"
+              >
+                Мгновенное пополнение
+              </div>
+              <div
+                class="text-zinc-400 text-center text-base leading-5 self-stretch mt-8"
+              >
+                Несмотря на сложный маршрут платежа, нам и нашим партнерам удалось
+                создать сервис, который позволит моментально зачислить деньги на
+                ваш кошелек Steam.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative self-center w-full max-w-[1107px] mt-32 max-md:max-w-full max-md:mt-10"
+      >
+        <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+          <div
+            class="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="relative flex flex-col items-stretch max-md:max-w-full max-md:mt-10"
+            >
+              <div
+                class="text-white text-4xl font-bold leading-10 whitespace-nowrap max-md:max-w-full"
+              >
+                О нас
+              </div>
+              <div
+                class="text-white text-2xl font-bold leading-7 mt-24 max-md:max-w-full max-md:mt-10"
+              >
+                SteamGame - сервис моментального пополнения аккаунтов Steam
+              </div>
+              <div class="text-zinc-400 text-lg leading-5 mt-5 max-md:max-w-full">
+                Мы выстроили партнерские отношение с надежными поставщиками
+                финансовых услуг для того, чтобы вы могли мгновенно и недорого
+                пополнить баланс кошелька стим.
+              </div>
+              <a href="#main"
+                class="text-white text-center text-lg font-black leading-5 shadow-sm bg-[linear-gradient(270deg,#B5DC59_-1.71%,#661800_117.89%)] items-center mt-24 px-5 py-7 rounded-2xl max-md:max-w-full max-md:mt-10"
+              >
+                Пополнить баланс
+            </a>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-[51%] ml-5 max-md:w-full max-md:ml-0"
+          >
+            <img
+              loading="lazy"
+              srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/e07ea1eb-069a-4b9d-a72f-9c0f77abff41?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e07ea1eb-069a-4b9d-a72f-9c0f77abff41?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e07ea1eb-069a-4b9d-a72f-9c0f77abff41?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e07ea1eb-069a-4b9d-a72f-9c0f77abff41?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e07ea1eb-069a-4b9d-a72f-9c0f77abff41?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e07ea1eb-069a-4b9d-a72f-9c0f77abff41?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e07ea1eb-069a-4b9d-a72f-9c0f77abff41?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e07ea1eb-069a-4b9d-a72f-9c0f77abff41?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+              class="aspect-[1.07] object-contain object-center w-full overflow-hidden grow mt-5 max-md:max-w-full max-md:mt-10"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative bg-yellow-950 bg-opacity-30 self-stretch w-full pt-0 pb-0 mt-24 pl-20 pr-10 max-md:max-w-full max-md:mt-10 max-md:px-5"
+      >
+        <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+          <div
+            class="flex flex-col items-stretch w-[32%] max-md:w-full max-md:ml-0"
+          >
+            <div
+              class="relative flex flex-col items-stretch my-auto max-md:mt-10"
+            >
+              <div
+                class="text-white text-4xl font-bold leading-10 whitespace-nowrap"
+              >
+                Вопросы?
+              </div>
+              <div class="text-zinc-400 text-lg leading-5 mt-10">
+                <span class="text-white">
+                  Остались вопросы по работе нашего сервиса, есть предложения по
+                  улучшению или сотрудничеству — напишите.
+                  <br />
+                  <br />
+                  Нам важна обратная связь.
+                  <br />
+                  <br>
+                </span>
+                <a href="mailto:support@steamgame.kz" class="font-bold text-white">support@steamgame.kz</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-stretch w-[68%] ml-5 max-md:w-full max-md:ml-0"
+          >
+            <img
+              loading="lazy"
+              srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a292dd49-79f2-4ef7-9b91-3ea4cc891b86?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a292dd49-79f2-4ef7-9b91-3ea4cc891b86?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a292dd49-79f2-4ef7-9b91-3ea4cc891b86?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a292dd49-79f2-4ef7-9b91-3ea4cc891b86?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a292dd49-79f2-4ef7-9b91-3ea4cc891b86?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a292dd49-79f2-4ef7-9b91-3ea4cc891b86?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a292dd49-79f2-4ef7-9b91-3ea4cc891b86?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a292dd49-79f2-4ef7-9b91-3ea4cc891b86?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+              class="aspect-[1.49] object-contain object-center w-full overflow-hidden max-md:max-w-full max-md:mt-4"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</body>
+{% endblock %}
+</html>

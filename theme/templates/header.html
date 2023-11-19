@@ -1,0 +1,306 @@
+{% load static tailwind_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block extra_css %}{% endblock %}
+    {% tailwind_css %}
+
+    <title>
+        {% block title %}Пополнить баланс STEAM{% endblock %} — The Steam Balance
+    </title>
+</head>
+<body class="m-0 p-0">
+  <div class="flex flex-col  bg-[url('../static/images/back.png')]">
+    <div
+      class="flex-col overflow-hidden self-stretch relative flex min-h-[2430px] w-full pl-0 pt-8 pb-5 max-md:max-w-full"
+    >
+      <img
+        loading="lazy"
+        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/68fc31b4-17d6-4ed8-837b-1a22dbe324d4?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/68fc31b4-17d6-4ed8-837b-1a22dbe324d4?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/68fc31b4-17d6-4ed8-837b-1a22dbe324d4?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/68fc31b4-17d6-4ed8-837b-1a22dbe324d4?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/68fc31b4-17d6-4ed8-837b-1a22dbe324d4?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/68fc31b4-17d6-4ed8-837b-1a22dbe324d4?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/68fc31b4-17d6-4ed8-837b-1a22dbe324d4?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/68fc31b4-17d6-4ed8-837b-1a22dbe324d4?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+        class="absolute z-[-1] h-full w-full object-cover object-center inset-0"
+      />
+      <div
+        class="relative bg-black self-stretch flex w-full flex-col pt-5 pb-0.5 px-5 max-md:max-w-full hidden md:block"
+      >
+        <div
+          class="flex w-[76px] max-w-full items-center gap-2 ml-28 max-md:ml-2.5"
+        >
+          <div
+            class="flex w-[7px] shrink-0 h-[7px] flex-col my-auto rounded-[50%]"
+          ></div>
+          <div class="text-white text-xs font-semibold leading-3 self-stretch">
+            <span id="counter1" class="font-semibold text-green-400">
+              224
+              <br />
+            </span>
+            <span class="font-medium text-white">ОНЛАЙН</span>
+          </div>
+        </div>
+      </div>
+
+      
+      <div
+        class="relative self-center flex w-full max-w-[1248px] items-start justify-between gap-5 mt-1.5 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
+      >
+        <div class="self-stretch max-md:max-w-full hidden md:block">
+          <div
+            class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0"
+          >
+            <a href=""
+              class="flex flex-col items-stretch w-[22%] max-md:w-full max-md:ml-0"
+            >
+              <img
+                loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/891fdfb0-b77f-45f2-a3f1-d2277ea33977?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/891fdfb0-b77f-45f2-a3f1-d2277ea33977?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/891fdfb0-b77f-45f2-a3f1-d2277ea33977?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/891fdfb0-b77f-45f2-a3f1-d2277ea33977?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/891fdfb0-b77f-45f2-a3f1-d2277ea33977?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/891fdfb0-b77f-45f2-a3f1-d2277ea33977?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/891fdfb0-b77f-45f2-a3f1-d2277ea33977?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/891fdfb0-b77f-45f2-a3f1-d2277ea33977?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                class="aspect-[1.03] object-contain object-center w-[120px] overflow-hidden shrink-0 max-w-full grow"
+              />
+            </a>
+            <div
+              class="flex flex-col items-stretch w-[39%] ml-5 max-md:w-full max-md:ml-0 "
+            >
+              <a href=""
+                class="text-white text-xl font-bold leading-6 mt-7 max-md:mt-10"
+              >
+                The <br> Steam Balance
+              </div>
+            </a>
+            <div
+              class="flex flex-col items-stretch w-[39%] ml-5 max-md:w-full max-md:ml-0"
+            >
+              <div
+                class="bg-yellow-950 flex items-stretch justify-between gap-5 w-full m-auto pl-6 pr-12 py-3 rounded-2xl max-md:mt-10 max-md:px-5"
+              >
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/31c70d80-f159-4d25-9d42-f36d5f0fd871?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+                  class="aspect-square object-contain object-center w-[22px] overflow-hidden shrink-0 max-w-full"
+                />
+                <div
+                  class="text-neutral-200 text-base leading-5 self-center grow whitespace-nowrap my-auto"
+                >
+                  Мои покупки
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="self-center flex gap-2.5 my-auto hidden md:block">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fd01345-0910-4f87-a5fc-b52b55bc0709?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-square object-contain object-center w-[22px] overflow-hidden shrink-0 max-w-full"
+          />
+          <div class="text-white text-sm font-semibold leading-4">
+            <span id="counter2" class="font-extrabold text-yellow-300">
+              1658752
+              <br />
+            </span>
+            <span class="text-white"><br>ПОПОЛНЕНИЙ</span>
+          </div>
+        </div>
+        <div class="self-center flex gap-2.5 my-auto hidden md:block">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6892a544-0fc4-414e-9369-58d1305c9785?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-square object-contain object-center w-[22px] overflow-hidden shrink-0 max-w-full"
+          />
+          <div class="text-white text-sm font-semibold leading-4 self-stretch">
+            <span id="counter3" class="font-bold text-yellow-300">
+              483805
+              <br/>
+            </span>
+
+            <script>
+              function getRandomNumber(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+              }
+          
+              function addRandomNumber(elementId) {
+                var numberElement = document.getElementById(elementId);
+                if (elementId == "counter1"){
+                  var currentNumber = parseInt(localStorage.getItem(elementId)) || 224;
+                }
+                else if (elementId == "counter2"){
+                  var currentNumber = parseInt(localStorage.getItem(elementId)) || 1658947 ;
+                }
+                else if (elementId == "counter3"){
+                  var currentNumber = parseInt(localStorage.getItem(elementId)) || 483271 ;
+                }
+
+
+                if (elementId == "counter1"){
+                  var randomNumber = getRandomNumber(-1, 1);
+
+                }
+                else{
+                  var randomNumber = getRandomNumber(1, 3);
+                }
+                
+                var newNumber = currentNumber + randomNumber;
+          
+                // Форматирование числа с разделителями тысяч
+                var formattedNumber = newNumber.toLocaleString();
+          
+                // Сохраняем новое число в localStorage
+                localStorage.setItem(elementId, newNumber);
+          
+                numberElement.textContent = formattedNumber;
+              }
+          
+              // При загрузке страницы сразу вызываем функции для всех счетчиков
+              addRandomNumber('counter1');
+              addRandomNumber('counter2');
+              addRandomNumber('counter3');
+          
+              var interval = 2000;
+              
+              // Используйте разные интервалы для каждого счетчика, чтобы они не синхронизировались
+              setInterval(function() {
+                addRandomNumber('counter1');
+              }, interval * 3);
+          
+              setInterval(function() {
+                addRandomNumber('counter2');
+              }, interval); // Увеличьте интервал для второго счетчика
+          
+              setInterval(function() {
+                addRandomNumber('counter3');
+              }, interval * 2); // Увеличьте интервал для третьего счетчика
+            </script>
+
+            <span class="text-white"><br>КЛИЕНТОВ</span>
+          </div>
+        </div>
+        <a class="mt-7 hidden md:block" target="_blank" href="https://vk.com/">
+            <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f451d7b-bc46-4511-a2ad-45549dbe4529?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+            class="aspect-[2.96] object-contain object-center w-[133px] overflow-hidden self-center shrink-0 max-w-full my-auto"
+          />
+        </a>
+
+      </div>
+
+      <div class="relative flex w-full items-center justify-center gap-5 my-auto max-md:max-w-full max-md:flex-wrap max-md:justify-center max-md:mt-10 max-sm:-mt-[6px] ml-[-55px] md:hidden">
+        <img
+          loading="lazy"
+          srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/b5afdb18-70a0-4c15-9c27-1f7f289c6f2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5afdb18-70a0-4c15-9c27-1f7f289c6f2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5afdb18-70a0-4c15-9c27-1f7f289c6f2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5afdb18-70a0-4c15-9c27-1f7f289c6f2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5afdb18-70a0-4c15-9c27-1f7f289c6f2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5afdb18-70a0-4c15-9c27-1f7f289c6f2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5afdb18-70a0-4c15-9c27-1f7f289c6f2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b5afdb18-70a0-4c15-9c27-1f7f289c6f2f?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+          class="aspect-[1.17] object-contain object-right w-[120px] overflow-hidden shrink-0 max-w-full grow max-sm:w-full max-sm:max-w-[100px] max-sm:ml-auto"
+        />
+      
+        <a href="{% url 'theme:index' %}" class="self-center flex gap-2.5 my-auto">
+          <div class="text-white text-sm font-semibold leading-4 self-stretch max-sm:-ml-0.5 max-sm:mr-2 max-sm:pr-0">
+            <span class="text-3xl not-italic font-bold">The</span>
+            <br class="text-3xl" />
+            <span class="text-3xl not-italic font-bold">Steam Balance</span>
+            <br />
+          </div>
+        </a>
+      </div>
+
+      <img
+      loading="lazy"
+      srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/9582a560-49d7-402c-9b19-d85d52763135?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9582a560-49d7-402c-9b19-d85d52763135?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9582a560-49d7-402c-9b19-d85d52763135?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9582a560-49d7-402c-9b19-d85d52763135?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9582a560-49d7-402c-9b19-d85d52763135?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9582a560-49d7-402c-9b19-d85d52763135?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9582a560-49d7-402c-9b19-d85d52763135?apiKey=fa4215c420a442bf87a69fcbffc5ead0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9582a560-49d7-402c-9b19-d85d52763135?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+      class="aspect-[1.9] object-contain object-center w-full overflow-hidden max-sm:max-w-[426px] max-sm:w-full max-sm:-mt-1 max-sm:mx-auto pt-6 md:hidden"
+    />
+
+      <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/92dcc72f-3a5d-4ffc-80ac-3f6637fdef56?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+      class="aspect-[4.42] object-contain object-center w-full overflow-hidden max-sm:w-full max-sm:max-w-[426px] max-sm:mx-auto mb-[-40px] pt-6 md:hidden"
+    />
+      
+
+
+    {% block content %}{% endblock %}
+
+    <div class="bg-black mt-[-20px] flex flex-col items-center max-sm:pr-6 max-sm:pl-6">
+      <div
+      class="text-neutral-500 text-base leading-5 max-w-[828px] ml-28 mt-14 self-start max-md:max-w-full max-md:mt-10"
+    >
+      © 2022—2023 SteamGame. Все права защищены. НДС включён во все цены, где он
+      применим
+    </div>
+    <div
+      class="text-neutral-500 text-xs leading-3 self-center max-w-[1158px] mt-3 max-md:max-w-full"
+    >
+      Моментальное и недорогое пополнение стим аккаунтов при поддержке надежных
+      партнеров!Моментальное и недорогое пополнение стим аккаунтов при поддержке
+      надежных партнеров!Моментальное и недорогое пополнение стим аккаунтов при
+      поддержке надежных партнеров!Моментальное и недорогое пополнение стим
+      аккаунтов при поддержке надежных партнеров!Моментальное и недорогое
+      пополнение стим аккаунтов при поддержке надежных партнеров!Моментальное и
+      недорогое пополнение стим аккаунтов при поддержке надежных партнеров!
+    </div>
+    <div
+      class="self-center w-full max-w-[1095px] mt-16 max-md:max-w-full max-md:mt-10"
+    >
+      <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+        <div
+          class="flex flex-col items-stretch w-[29%] max-md:w-full max-md:ml-0"
+        >
+          <div class="text-stone-300 text-lg leading-4 mt-16 max-md:mt-10">
+            Моментальное и недорогое пополнение стим аккаунтов при поддержке
+            надежных партнеров!
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0"
+        >
+          <div class="text-white text-base leading-7 mt-1.5 max-md:mt-10">
+            <ul>
+              <li><a href="{% url 'theme:faq' %}">FAQ</a></li>
+              <li><a href="{% url 'theme:info1' %}">Политика конфиденциальности</a></li>
+              <li><a href="{% url 'theme:info2' %}">Пользовательское соглашение</a></li>
+              <li><a href="{% url 'theme:info3' %}">Правила возврата</a></li>
+              <li><a href="{% url 'theme:about' %}">О компании</a></li>
+              <li><a href="{% url 'theme:blog' %}">Блог</a></li>
+          </ul>
+          
+          
+          
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-stretch w-[38%] ml-5 max-md:w-full max-md:ml-0"
+        >
+          <div class="flex items-stretch gap-5 max-md:mt-10">
+            <a class="mt-7" target="_blank" href="https://vk.com/">
+              <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f451d7b-bc46-4511-a2ad-45549dbe4529?apiKey=fa4215c420a442bf87a69fcbffc5ead0&"
+              class="aspect-[2.96] object-contain object-center w-[133px] overflow-hidden self-center shrink-0 max-w-full my-auto"
+            />
+            </a>
+            <a class="mt-7" target="_blank" href="https://vk.com/">
+              <img
+              loading="lazy"
+              src="../static/svg/Group 300.svg"
+              class="aspect-[2.96] object-contain object-center w-[133px] overflow-hidden self-center shrink-0 max-w-full my-auto"
+            />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="text-neutral-500 text-xs leading-3 self-center whitespace-nowrap mt-2 mb-8"
+    >
+        Coded by ©
+        <a href="https://github.com/lyarov22" target="_blank">
+        Ilya Fedorov
+    </div>
+
+  </div>
+    </div>  
+    
+  
+
+</body>
+</html>
