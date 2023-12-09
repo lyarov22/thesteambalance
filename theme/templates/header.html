@@ -1,5 +1,6 @@
 {% load static tailwind_tags %}
 {% load static %}
+{% load   %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +16,9 @@
     </title>
 </head>
 <body class="m-0 p-0">
-  <div class="flex flex-col  bg-[url('../static/images/back.png')]">
+  <div class="flex flex-col  bg-[url('../img/back.png')]">
     <div
-      class="flex-col overflow-hidden self-stretch relative flex min-h-[2430px] w-full pl-0 pt-8 pb-5 max-md:max-w-full"
+      class="flex-col overflow-hidden self-stretch relative flex w-full pl-0 pt-8 pb-5 max-md:max-w-full"
     >
       <img
         loading="lazy"
@@ -51,7 +52,7 @@
           <div
             class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0"
           >
-            <a href=""
+            <a href="{% url 'theme:index' %}"
               class="flex flex-col items-stretch w-[22%] max-md:w-full max-md:ml-0"
             >
               <img
@@ -63,7 +64,7 @@
             <div
               class="flex flex-col items-stretch w-[39%] ml-5 max-md:w-full max-md:ml-0 "
             >
-              <a href=""
+              <a href="{% url 'theme:index' %}"
                 class="text-white text-xl font-bold leading-6 mt-7 max-md:mt-10"
               >
                 The <br> Steam Balance
@@ -219,17 +220,23 @@
 
     {% block content %}{% endblock %}
 
-    <div class="bg-black mt-[-20px] flex flex-col items-center max-sm:pr-6 max-sm:pl-6 pb-20">
+    <div class="bg-black mt-[-20px] flex flex-col items-center max-sm:pr-6 max-sm:pl-6">
       <div
       class="text-neutral-500 text-base leading-5 max-w-[828px] ml-28 mt-14 self-start max-md:max-w-full max-md:mt-10"
     >
-      © 2022—2023
+      © 2022—2023 SteamGame. Все права защищены. НДС включён во все цены, где он
+      применим
     </div>
     <div
       class="text-neutral-500 text-xs leading-3 self-center max-w-[1158px] mt-3 max-md:max-w-full"
     >
-    НДС включён во все цены, где он
-    применим
+      Моментальное и недорогое пополнение стим аккаунтов при поддержке надежных
+      партнеров!Моментальное и недорогое пополнение стим аккаунтов при поддержке
+      надежных партнеров!Моментальное и недорогое пополнение стим аккаунтов при
+      поддержке надежных партнеров!Моментальное и недорогое пополнение стим
+      аккаунтов при поддержке надежных партнеров!Моментальное и недорогое
+      пополнение стим аккаунтов при поддержке надежных партнеров!Моментальное и
+      недорогое пополнение стим аккаунтов при поддержке надежных партнеров!
     </div>
     <div
       class="self-center w-full max-w-[1095px] mt-16 max-md:max-w-full max-md:mt-10"
@@ -281,6 +288,14 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div
+      class="text-neutral-500 text-xs leading-3 self-center whitespace-nowrap mt-2 mb-8"
+    >
+        Coded by ©
+        <a href="https://github.com/lyarov22" target="_blank">
+        Ilya Fedorov
     </div>
 
   </div>

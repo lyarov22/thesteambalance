@@ -9,6 +9,8 @@ app_name = 'theme'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('theme.urls')),
+
+
 ]
 
 if settings.DEBUG:

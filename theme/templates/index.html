@@ -2,6 +2,8 @@
 
 {% load static tailwind_tags %}
 {% load static %}
+{% load   %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,7 @@
     {% tailwind_css %}
 </head>
 {% block content %}
-<body class="m-0 p-0">
+<body class="m-0 p-0" id="main">
   <div class="flex flex-col max-sm:pr-6 max-sm:pl-6">
     
       <div
@@ -33,7 +35,7 @@
                 >
                   ?
                 </div>
-                <div id="main"
+                <div 
                   class="text-white text-sm font-medium leading-4 grow whitespace-nowrap mt-1.5 self-start"
                 >
                   Как это работает?
@@ -327,7 +329,7 @@
               >
                 Мы тщательно анализируем ситуацию на рынке международных
                 финансовых услуг и постоянно работаем над тем, чтобы вы могли
-                недорого пополнить стим в России.
+                недорого пополнить стим в Казахстане.
               </div>
             </div>
           </div>
