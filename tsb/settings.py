@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-j5#hg+k509xzi5v=y4(((b^8a9+9yg+^7#3jo$br1dsp8zytdy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'thesteambalance.onrender.com']
 
 
 # Application definition
